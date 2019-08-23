@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Add an message</a>
+<div th:each="message : ${messages}">
+    <!--/*@thymesVar id="headshot" type=""*/-->
+    <!--/*@thymesVar id="headshot" type=""*/-->
+    <div th:if="${message.headshot} !=null">
+        <img th:src="${message.headshot}" />
+        <hr />
+    </div>
+    <h3 th:text="${message.name}"></h3>
+    <h4 th:text="${message.realname}"></h4>
+</div>
+</body>
+</html>
